@@ -1,4 +1,4 @@
-import { GET_LEADS } from '../actions/type.js';
+import { GET_LEADS } from '../actions/types.js';
 
 const initialState = {
   leads: [],
@@ -11,5 +11,7 @@ export default function (state = initialState, action) {
         ...state,
         leads: action.payload,
       };
+    default:
+      return state;
   }
 }
