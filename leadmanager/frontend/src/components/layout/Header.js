@@ -14,6 +14,9 @@ export class Header extends Component {
 
     const authLinks = (
       <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+        <span className='navbar-text mr-3'>
+          <strong>{user ? `Welcome ${user.username}` : ''}</strong>
+        </span>
         <li className='nav-item'>
           <button
             onClick={this.props.logout}
